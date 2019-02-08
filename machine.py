@@ -1,17 +1,30 @@
 from sklearn import tree
 
-bumpy = 0
-smooth = 1
+cannot_fly = 0
+can_fly = 1
 
-features = [[140, smooth], [130, smooth], [150, bumpy], [170, bumpy]]
+# weight in grams + wings or not
 
-apple = 0
-orange = 1
+# birds
+magpie = [210, can_fly]
+crow = [550, can_fly]
+ostrich = [150000, cannot_fly] # tricky
+albatross = [7000, can_fly]
 
-labels = [apple, apple, orange, orange]
+# mammals
+rat = [250, cannot_fly]
+bat = [12, can_fly] # tricky
+elephant = [6000000, cannot_fly]
+moose = [500000, cannot_fly]
+
+features = [magpie, crow, ostrich, albatross, rat, bat, elephant, moose]
+
+bird = 0
+mammal = 1
+
+labels = [bird, bird, bird, bird, mammal, mammal, mammal, mammal]
 
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(features, labels)
 
-# Should be an orange, 1
-print classifier.predict([[150, 0]])
+print classifier.predict([[150, 1]])
