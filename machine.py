@@ -27,4 +27,14 @@ labels = [bird, bird, bird, bird, mammal, mammal, mammal, mammal]
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(features, labels)
 
-print classifier.predict([[150, 1]])
+while(True):
+    input_weight = input("Enter the animal's weight: ")
+    input_can_fly = input("Enter 1 if the animal can fly or 0 if it cannot: ")
+
+    animal_type = classifier.predict([[input_weight, input_can_fly]])[0]
+
+    sentence_start = "The animal is probably a "
+
+    guess = 'bird!' if animal_type == bird else 'mammal!'
+
+    print sentence_start + guess
