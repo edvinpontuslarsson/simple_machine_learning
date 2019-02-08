@@ -1,0 +1,98 @@
+[
+    {
+        "species": "magpie",
+        "weight": 210,
+        "can_fly": true,
+        "is_mammal": false
+    },
+    {
+        "species": "crow",
+        "weight": 550,
+        "can_fly": true,
+        "is_mammal": false
+    },
+    {
+        "species": "ostrich",
+        "weight": 150000,
+        "can_fly": false,
+        "is_mammal": false
+    },
+    {
+        "species": "albatross",
+        "weight": 7000,
+        "can_fly": true,
+        "is_mammal": false
+    },
+    {
+        "species": "penguin",
+        "weight": 23000,
+        "can_fly": false,
+        "is_mammal": false
+    },
+    {
+        "species": "parrot",
+        "weight": 1700,
+        "can_fly": true,
+        "is_mammal": false
+    },
+    {
+        "species": "swallow",
+        "weight": 14,
+        "can_fly": true,
+        "is_mammal": false
+    },
+    {
+        "species": "Colibri",
+        "weight": 2,
+        "can_fly": true,
+        "is_mammal": false
+    },
+    {
+        "species": "rat",
+        "weight": 250,
+        "can_fly": false,
+        "is_mammal": true
+    },
+    {
+        "species": "bat",
+        "weight": 12,
+        "can_fly": true,
+        "is_mammal": true
+    },
+    {
+        "species": "elephant",
+        "weight": 6000000,
+        "can_fly": false,
+        "is_mammal": true
+    },
+    {
+        "species": "moose",
+        "weight": 500000,
+        "can_fly": false,
+        "is_mammal": true
+    },
+    {
+        "species": "giraffe",
+        "weight": 800000,
+        "can_fly": false,
+        "is_mammal": true
+    },
+    {
+        "species": "cheetah",
+        "weight": 50000,
+        "can_fly": false,
+        "is_mammal": true
+    },
+    {
+        "species": "panda",
+        "weight": 80000,
+        "can_fly": false,
+        "is_mammal": true
+    },
+    {
+        "species": "wildebeest",
+        "weight": 130000,
+        "can_fly": false,
+        "is_mammal": true
+    }
+]

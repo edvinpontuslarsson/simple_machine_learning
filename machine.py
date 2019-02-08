@@ -34,7 +34,5 @@ while(True):
     animal_type = classifier.predict([[input_weight, input_can_fly]])[0]
 
     sentence_start = "The animal is probably a "
-
     guess = 'bird!' if animal_type == bird else 'mammal!'
-
     print sentence_start + guess
