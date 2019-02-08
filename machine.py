@@ -17,8 +17,6 @@ for animal in animals:
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(features, labels)
 
-# the bird emu weighs around 40000 grams, cannot fly, an example to test
-
 while(True):
     input_weight = input("Enter the animal's weight in grams: ")
     input_can_fly = input("Enter 1 if the animal can fly or 0 if it cannot: ")
