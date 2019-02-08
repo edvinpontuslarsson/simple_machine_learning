@@ -3,7 +3,7 @@ from sklearn import tree
 cannot_fly = 0
 can_fly = 1
 
-# weight in grams + wings or not
+# weight in grams + can fly?
 
 # birds
 magpie = [210, can_fly]
@@ -28,7 +28,7 @@ classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(features, labels)
 
 while(True):
-    input_weight = input("Enter the animal's weight: ")
+    input_weight = input("Enter the animal's weight in grams: ")
     input_can_fly = input("Enter 1 if the animal can fly or 0 if it cannot: ")
 
     animal_type = classifier.predict([[input_weight, input_can_fly]])[0]
