@@ -1,28 +1,36 @@
 import json
 from sklearn import tree
 
-with open("animals.json", "r") as read_file:
-    animals = json.load(read_file)
 
-features = []
-labels = []
+class Classifier:
+    def __init__(self):
+        with open("animals.json", "r") as read_file:
+            animals = json.load(read_file)
 
-for animal in animals:
-    animal["can_fly"] = 1 if animal["can_fly"] else 0
-    animal["is_mammal"] = 1 if animal["is_mammal"] else 0
+        features = []
+        labels = []
 
-    features.append([animal["weight"], animal["can_fly"]])
-    labels.append(animal["is_mammal"])
+        for animal in animals:
+            animal["can_fly"] = 1 if animal["can_fly"] else 0
+            animal["is_mammal"] = 1 if animal["is_mammal"] else 0
 
-classifier = tree.DecisionTreeClassifier()
-classifier = classifier.fit(features, labels)
+        features.append([animal["weight"], animal["can_fly"]])
+        labels.append(animal["is_mammal"])
 
-while(True):
-    input_weight = input("Enter the animal's weight in grams: ")
-    input_can_fly = input("Enter 1 if the animal can fly or 0 if it cannot: ")
+        self.classifier = tree.DecisionTreeClassifier()
+        self.classifier = self.classifier.fit(features, labels)
 
-    animal_type = classifier.predict([[input_weight, input_can_fly]])[0]
+    def is_mammal(self, weight, can_fly):
+        can_fly = 1 if can_fly else 0
+        print(can_fly)
+        animal_type = self.classifier.predict(
+            [[weight, can_fly]])[0]
+        print(animal_type)
+        return animal_type == 1
 
-    sentence_start = "The animal is probably a "
-    guess = 'mammal!' if animal_type == 1 else 'bird!'
-    print(sentence_start + guess)
+
+classifier = Classifier()
+if classifier.is_mammal(7000, False):
+    print("It's a mammal!")
+else:
+    print("It's a bird!")
