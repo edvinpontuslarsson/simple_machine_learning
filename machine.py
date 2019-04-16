@@ -25,4 +25,4 @@ while(True):
 
     sentence_start = "The animal is probably a "
     guess = 'mammal!' if animal_type == 1 else 'bird!'
-    print sentence_start + guess
+    print(sentence_start + guess)
