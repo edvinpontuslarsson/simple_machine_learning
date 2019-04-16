@@ -3,9 +3,6 @@ from sklearn import tree
         
 
 def is_mammal(weight, can_fly):
-    import json
-    from sklearn import tree
-
     with open("animals.json", "r") as read_file:
         animals = json.load(read_file)
 
