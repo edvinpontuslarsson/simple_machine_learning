@@ -1,6 +1,6 @@
 import json
 from sklearn import tree
-        
+
 
 def is_mammal(weight, can_fly):
     with open("animals.json", "r") as read_file:
@@ -20,11 +20,5 @@ def is_mammal(weight, can_fly):
     classifier = classifier.fit(features, labels)
 
     animal_type = classifier.predict([[weight, can_fly]])[0]
-    
-    return animal_type == 1
 
-# temporary, for testing
-if is_mammal(6500, True):
-    print("It's a mammal!")
-else:
-    print("It's a bird!")
+    return animal_type == 1
